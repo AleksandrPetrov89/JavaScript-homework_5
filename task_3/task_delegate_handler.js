@@ -1,3 +1,4 @@
+const holes = document.querySelector(".hole-game");
 const dead = document.getElementById("dead");
 const lost = document.getElementById("lost");
 let molesKilled = 0;
@@ -27,8 +28,5 @@ function handler (event) {
 };
 
 
-for (let index = 1; index < 10; index++ ) {
-    let getHole = document.getElementById(`hole${index}`);
-    console.log(getHole);
-    getHole.onclick = handler;
-};
+holes.addEventListener('click', handler);
+// holes.onclick = handler; /* тоже работает */
